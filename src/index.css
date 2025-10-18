@@ -27,25 +27,25 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FEF7F7;
+  background: #FFF9FB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #E8B4B8, #9B8FB8);
+  background: linear-gradient(135deg, #FFB3D9, #C8A2C8);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #9B8FB8, #E8B4B8);
+  background: linear-gradient(135deg, #C8A2C8, #FFB3D9);
 }
 
 /* Selection Color */
 ::selection {
-  background-color: #E8B4B8;
+  background-color: #FFB3D9;
   color: #FFFFFF;
 }
 
 ::-moz-selection {
-  background-color: #E8B4B8;
+  background-color: #FFB3D9;
   color: #FFFFFF;
 }

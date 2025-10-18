@@ -60,7 +60,7 @@ function App() {
           </div>
           <div className="hero-text">
             <h1>Hebron Asrat</h1>
-            <p className="subtitle">Tax & Corporate Law Specialist</p>
+            <p className="subtitle">Aspiring Tax & Corporate Law Professional</p>
             <p className="location">Arsi, Ethiopia</p>
             <div className="hero-buttons">
               <a href="/CV.pdf" download className="btn btn-primary">Download CV</a>
