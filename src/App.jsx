@@ -297,6 +297,9 @@ function App() {
         <div className="container">
           <p>&copy; 2025 Hebron Asrat. All rights reserved.</p>
           <p className="footer-subtitle">Specializing in Tax Law, Corporate Law & International Taxation</p>
+          <p className="footer-dev">
+            Developed by <a href="https://izzyt.netlify.app" target="_blank" rel="noopener noreferrer">izzyt.netlify.app</a>
+          </p>
         </div>
       </footer>
       </div>
