@@ -1,6 +1,24 @@
 import React, { useState } from 'react'
 import './App.css'
 
+// Line icons (replace emoji for a cleaner, professional look)
+const Icon = ({ name }) => {
+  const paths = {
+    pin: <><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></>,
+    mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></>,
+    phone: <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />,
+    linkedin: <><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" /></>,
+    scale: <><path d="M12 3v18M7 21h10M5 7h14M12 5l-7 2M12 5l7 2" /><path d="m5 7-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z" /></>,
+    book: <><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z" /><path d="M4 21V5M8 7h7" /></>,
+    users: <><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6" /></>,
+  }
+  return (
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {paths[name]}
+    </svg>
+  )
+}
+
 // Card Component
 const Card = ({ children, className = '', hover = true }) => (
   <div className={`card ${hover ? 'card-hover' : ''} ${className}`}>
@@ -31,7 +49,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <span className="logo-text">HA</span>
+            <span className="logo-text">Hebron Asrat</span>
             <span className="logo-subtitle">Tax & Corporate Law</span>
       </div>
           <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
@@ -56,12 +74,13 @@ function App() {
         <div className="hero-content">
           <div className="hero-image">
             <img src="/heb.png" alt="Hebron Asrat" />
-            <div className="image-decoration"></div>
+            <div className="image-frame"></div>
           </div>
           <div className="hero-text">
             <h1>Hebron Asrat</h1>
+            <p className="eyebrow">LL.B Candidate · Arsi University</p>
             <p className="subtitle">Aspiring Tax & Corporate Law Professional</p>
-            <p className="location">Arsi, Ethiopia</p>
+            <p className="location">Addis Ababa, Ethiopia</p>
             <div className="hero-buttons">
               <a href="/CV.pdf" download className="btn btn-primary">Download CV</a>
               <a href="#contact" onClick={() => scrollToSection('contact')} className="btn btn-secondary">Get in Touch</a>
@@ -219,17 +238,17 @@ function App() {
           <h2 className="section-title">Achievements & Activities</h2>
           <div className="achievements-grid">
             <Card>
-              <div className="achievement-icon">🏆</div>
+              <div className="achievement-icon"><Icon name="scale" /></div>
               <h4>Moot Court Competition, Respondent</h4>
               <p>Arsi University, 2025</p>
             </Card>
             <Card>
-              <div className="achievement-icon">📚</div>
+              <div className="achievement-icon"><Icon name="book" /></div>
               <h4>Tax Law Research Project</h4>
               <p>Comparative Study: Tax Dispute Settlement in Ethiopia and Kenya</p>
             </Card>
             <Card>
-              <div className="achievement-icon">👥</div>
+              <div className="achievement-icon"><Icon name="users" /></div>
               <h4>Member, University Law Students' Association</h4>
               <p>Active participation in legal community and tax law discussions</p>
             </Card>
@@ -264,22 +283,22 @@ function App() {
           <h2 className="section-title">Get In Touch</h2>
           <div className="contact-grid">
             <Card>
-              <div className="contact-icon">📍</div>
+              <div className="contact-icon"><Icon name="pin" /></div>
               <h4>Location</h4>
-              <p>Arsi, Ethiopia</p>
+              <p>Addis Ababa, Ethiopia</p>
             </Card>
             <Card>
-              <div className="contact-icon">📧</div>
+              <div className="contact-icon"><Icon name="mail" /></div>
               <h4>Email</h4>
               <a href="mailto:asrathebron00@gmail.com">asrathebron00@gmail.com</a>
             </Card>
             <Card>
-              <div className="contact-icon">📱</div>
+              <div className="contact-icon"><Icon name="phone" /></div>
               <h4>Phone</h4>
               <a href="tel:+251979695977">+251 979695977</a>
             </Card>
             <Card>
-              <div className="contact-icon">💼</div>
+              <div className="contact-icon"><Icon name="linkedin" /></div>
               <h4>LinkedIn</h4>
               <a href="https://www.linkedin.com/in/hebron-asrat-6a3b8a316" target="_blank" rel="noopener noreferrer">
                 Connect with me
@@ -295,7 +314,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2025 Hebron Asrat. All rights reserved.</p>
+          <p>&copy; 2026 Hebron Asrat. All rights reserved.</p>
           <p className="footer-subtitle">Specializing in Tax Law, Corporate Law & International Taxation</p>
           <p className="footer-dev">
             Developed by <a href="https://izzyt.netlify.app" target="_blank" rel="noopener noreferrer">izzyt.netlify.app</a>
